@@ -17,3 +17,6 @@ export const DAYS_OF_WEEK: DayOfWeek[] = [
     { name: "Friday", dayInNepali: "शुक्रबार", initial: "F" },
     { name: "Saturday", dayInNepali: "शनिबार", initial: "Sa" },
 ];
+
+export const MAX_YEAR:number = 2100;
+export const MIN_YEAR:number = 2080;

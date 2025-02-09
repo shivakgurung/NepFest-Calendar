@@ -7,7 +7,7 @@ const fetchMonthData = async (year: number, month: number) => {
   return data;
 };
 
-export const useGetFestivals = (year: number, month: number) => {
+export const useGetMonthData = (year: number, month: number) => {
   return useQuery({
     queryKey: ["calendar", year, month],
     queryFn: () => fetchMonthData(year, month),

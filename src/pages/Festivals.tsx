@@ -1,7 +1,7 @@
 
 const Festivals = () => {
   return (
-    <h3 className="text-blue-700">Festivals</h3>
+    <h3 className="text-blue-700 min-h-[80vh]">Festivals</h3>
   )
 }
 

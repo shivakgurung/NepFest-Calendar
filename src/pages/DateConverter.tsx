@@ -1,7 +1,7 @@
 
 const DateConverter = () => {
   return (
-    <h6 className="text-blue-700">DateConverter</h6 >
+    <h6 className="text-blue-700 min-h-[80vh]">DateConverter</h6 >
   )
 }
 

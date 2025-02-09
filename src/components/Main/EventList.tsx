@@ -3,18 +3,18 @@ import { CalendarProps, Day } from "../../types/day"
 
 const EventList: FC<CalendarProps> = ({dayArray, monthMeta}) => {
   return (
-    <div className="col-span-12 xl:col-span-5">
-                <h2 className="font-manrope text-3xl leading-tight text-gray-900 mb-1.5">Nepali Festivals</h2>
-                <p className="text-lg font-normal text-gray-600 mb-8">Plan to celebrate to the fullest</p>
+    <div className="my-4 col-span-12 xl:col-span-5">
+                <h2 className="font-manrope text-3xl leading-tight text-gray-900 my-4">विदा तथा पर्वहरु:</h2>
+                {/* <p className="text-lg font-normal text-gray-600 mb-8">Plan & celebrate to the fullest</p> */}
                 <div className="flex gap-5 flex-col">
 
                   {dayArray?.map((festival: Day, i: number)=> {
                     return (
                         <div key={i} className="p-6 rounded-xl bg-white">
                     <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-2.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-                        <p className="text-base font-medium text-gray-900">{festival?.n +", " + monthMeta?.np}</p>
+                      <div className="flex items-center gap-2.5  flex-1 justify-center">
+                        <span className="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+                        <p className="text-base font-medium text-gray-900 text-center">{festival?.n +", " + monthMeta?.np + " (" + festival?.e + ", " + monthMeta?.en + ")"}</p>
                       </div>
                       <div className="dropdown relative inline-flex">
                         <button type="button" data-target="dropdown-b" className="dropdown-toggle inline-flex justify-center py-2.5 px-1 items-center gap-2 text-sm text-black rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:text-emerald-600  ">

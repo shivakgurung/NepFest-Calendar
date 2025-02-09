@@ -1,19 +1,22 @@
 // import { ADToBS } from "bikram-sambat-js";
-import { useGetFestivals } from '../hooks/useGetFestivals';
+import { useGetMonthData } from '../hooks/useGetMonthData';
 import { Day } from '../types/day';
 import EventList from "../components/Main/EventList";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Calendar from "../components/Main/Calendar";
 import { useCalendar } from "../context/CalendarContext";
 import DateSet from "../components/DateSet/DateSet";
 import { toNepaliNumber } from '../utils/ConvertToNepaliNumber';
+import { NEPALI_MONTHS_OF_YEAR } from '../lib/constant';
+import ToggleView from '../components/Toggle/Toggle';
+import LoadingSpinner from '../components/LoadingSpinner/LoadingSpinner';
 
 
 const Home = () => {
 
     const { currentNepaliDate, selectedYearMonth } = useCalendar();
-    const { data, isLoading } = useGetFestivals(selectedYearMonth?.year, selectedYearMonth?.month);
-
+    const { data, isLoading } = useGetMonthData(selectedYearMonth?.year, selectedYearMonth?.month);
+    const [isShowCalendar, setIsShowCalendar] = useState<boolean>(true)
 
     const festivals: Day[] = useMemo(() => {
         return (data?.days ?? []).filter((day: Day) => {
@@ -27,23 +30,24 @@ const Home = () => {
         < >
             <div className="w-full max-w-7xl mx-auto px-2 lg:px-8 py-8" >
 
-                {isLoading ? <p>Loading...</p> : (
+                {isLoading ? (<LoadingSpinner/>) : (
                     <div className="mb-4">
-                        <h3 className='text-3xl pr-4 leading-8 font-semibold text-gray-900'>Today's Date:</h3>
-                        <h5 className="text-2xl pr-4 leading-8 font-semibold text-gray-900">{ data?.metadata?.np + ", " + toNepaliNumber(currentNepaliDate?.day)}</h5>
+                        <h3 className='text-3xl pr-4 leading-8 font-semibold text-gray-900  mb-2 underline'>Today's Date</h3>
+                        <h5 className="text-2xl pr-4 leading-8 font-semibold text-gray-900">{NEPALI_MONTHS_OF_YEAR[currentNepaliDate?.month - 1] + " " + toNepaliNumber(currentNepaliDate?.year) + ", " + toNepaliNumber(currentNepaliDate?.day)}</h5>
                         <h5 className="text-l leading-8 font-semibold text-gray-900">{new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</h5>
                     </div>
                 )}
+                <br />
+                <div className="flex justify-center gap-x-2 sm:gap-x-4 lg:gap-x-10  w-full">
+                    <DateSet />
+                    <ToggleView isShowCalendar={isShowCalendar} setIsShowCalendar={setIsShowCalendar} />
+                </div>
+                <br />
 
-                <DateSet />
-                <br /><br />
-
-                {isLoading ? <p>Loading...</p> : (
+                {isLoading ? (<LoadingSpinner/>) : (
                     // renderCalendar(data?.days)
                     <>
-                        <Calendar dayArray={data?.days} monthMeta={data?.metadata} />
-                        <br /><br />
-                        <EventList dayArray={festivals} monthMeta={data?.metadata} />
+                        {isShowCalendar ? <Calendar dayArray={data?.days} monthMeta={data?.metadata} /> : <EventList dayArray={festivals} monthMeta={data?.metadata} />}
                     </>
                 )}
             </div>
