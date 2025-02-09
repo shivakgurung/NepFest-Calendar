@@ -1,29 +1,25 @@
 import { FC } from "react"
-import { Day } from "../../types/day"
+import { CalendarProps, Day } from "../../types/day"
 
-interface EventListProps {
-    festivals: Day[];
-}
-
-const EventList: FC<EventListProps> = ({festivals}) => {
+const EventList: FC<CalendarProps> = ({dayArray, monthMeta}) => {
   return (
     <div className="col-span-12 xl:col-span-5">
-                <h2 className="font-manrope text-3xl leading-tight text-gray-900 mb-1.5">Upcoming Festivals</h2>
+                <h2 className="font-manrope text-3xl leading-tight text-gray-900 mb-1.5">Nepali Festivals</h2>
                 <p className="text-lg font-normal text-gray-600 mb-8">Plan to celebrate to the fullest</p>
                 <div className="flex gap-5 flex-col">
 
-                  {festivals?.map((festival: Day)=> {
+                  {dayArray?.map((festival: Day, i: number)=> {
                     return (
-                        <div className="p-6 rounded-xl bg-white">
+                        <div key={i} className="p-6 rounded-xl bg-white">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-                        <p className="text-base font-medium text-gray-900">Jan 14, 2020 10:00 - 11:00</p>
+                        <p className="text-base font-medium text-gray-900">{festival?.n +", " + monthMeta?.np}</p>
                       </div>
                       <div className="dropdown relative inline-flex">
                         <button type="button" data-target="dropdown-b" className="dropdown-toggle inline-flex justify-center py-2.5 px-1 items-center gap-2 text-sm text-black rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:text-emerald-600  ">
                           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="4" viewBox="0 0 12 4" fill="none">
-                            <path d="M1.85624 2.00085H1.81458M6.0343 2.00085H5.99263M10.2124 2.00085H10.1707" stroke="currentcolor" stroke-width="2.5" stroke-linecap="round"></path>
+                            <path d="M1.85624 2.00085H1.81458M6.0343 2.00085H5.99263M10.2124 2.00085H10.1707" stroke="currentcolor" strokeWidth="2.5" strokeLinecap="round"></path>
                           </svg>
 
                         </button>
