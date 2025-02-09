@@ -38,7 +38,7 @@ const Home = () => {
                     </div>
                 )}
                 <br />
-                <div className="flex justify-center gap-x-2 sm:gap-x-4 lg:gap-x-10  w-full">
+                <div className="flex justify-center gap-x-0 sm:gap-x-4 lg:gap-x-10  w-full">
                     <DateSet />
                     <ToggleView isShowCalendar={isShowCalendar} setIsShowCalendar={setIsShowCalendar} />
                 </div>

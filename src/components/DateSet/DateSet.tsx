@@ -60,7 +60,6 @@ const DateSet = () => {
                         <option
                             key={year}
                             value={year}
-
                             className={year === selectedYearMonth?.year ? "bg-indigo-600" : ""}
                         >
                             {year}

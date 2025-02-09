@@ -1,0 +1,188 @@
+[
+  {
+    "name_np": "नयाँ वर्ष (विक्रम संवत)",
+    "name_en": "Nepali New Year (Bikram Sambat)",
+    "month_bs": "Baisakh",
+    "description": "The official New Year of Nepal based on the Bikram Sambat calendar."
+  },
+  {
+    "name_np": "बुद्ध जयन्ती",
+    "name_en": "Buddha Jayanti",
+    "month_bs": "Baisakh",
+    "description": "A celebration of Buddha's birth, enlightenment, and passing."
+  },
+  {
+    "name_np": "श्रमिक दिवस",
+    "name_en": "Labour Day",
+    "month_bs": "Baisakh",
+    "description": "A global celebration of workers' rights and labor movements."
+  },
+  {
+    "name_np": "रमजान ईद",
+    "name_en": "Ramadan Eid / Eid-ul-Fitr",
+    "month_bs": "Baisakh",
+    "description": "A significant Muslim festival marking the end of Ramadan, celebrated with prayers and feasts."
+  },
+  {
+    "name_np": "गणतन्त्र दिवस",
+    "name_en": "Republic Day",
+    "month_bs": "Jestha",
+    "description": "A national holiday celebrating Nepal’s transition to a republic in 2008."
+  },
+  {
+    "name_np": "गुरु पूर्णिमा",
+    "name_en": "Guru Purnima",
+    "month_bs": "Ashadh",
+    "description": "A day dedicated to teachers and spiritual gurus, showing gratitude and respect."
+  },
+  {
+    "name_np": "जनै पूर्णिमा / रक्षाबन्धन",
+    "name_en": "Janai Purnima / Rakshabandhan",
+    "month_bs": "Shrawan",
+    "description": "A festival where men change their sacred thread (janai) and sisters tie rakhi on brothers' wrists."
+  },
+  {
+    "name_np": "नाग पंचमी",
+    "name_en": "Naag Panchami",
+    "month_bs": "Shrawan",
+    "description": "A festival dedicated to snake deities, where people paste pictures of Naag (serpents) on their doors."
+  },
+  {
+    "name_np": "पितृ औंसी",
+    "name_en": "Pitri Aunsi (Father's Day)",
+    "month_bs": "Bhadra",
+    "description": "A day to honor and pay respects to deceased fathers by performing 'Shraddha' rituals."
+  },
+  {
+    "name_np": "बाल दिवस",
+    "name_en": "Children's Day",
+    "month_bs": "Bhadra",
+    "description": "A day dedicated to the welfare and rights of children in Nepal."
+  },
+  {
+    "name_np": "गाई जात्रा",
+    "name_en": "Gai Jatra",
+    "month_bs": "Bhadra",
+    "description": "A festival honoring the deceased, where families parade decorated cows or boys dressed as cows."
+  },
+  {
+    "name_np": "कृष्ण जन्माष्टमी",
+    "name_en": "Krishna Janmashtami",
+    "month_bs": "Bhadra",
+    "description": "A festival celebrating the birth of Lord Krishna with prayers and fasting."
+  },
+  {
+    "name_np": "हरितालिका तीज",
+    "name_en": "Haritalika Teej",
+    "month_bs": "Bhadra",
+    "description": "A festival where women fast and pray for their husbands' long life and marital happiness."
+  },
+  {
+    "name_np": "इन्द्र जात्रा",
+    "name_en": "Indra Jatra",
+    "month_bs": "Bhadra",
+    "description": "A major festival in Kathmandu featuring chariot processions and traditional dances."
+  },
+  {
+    "name_np": "संविधान दिवस",
+    "name_en": "Constitution Day",
+    "month_bs": "Ashwin",
+    "description": "A national holiday celebrating the promulgation of Nepal’s constitution in 2015."
+  },
+  {
+    "name_np": "विजया दशमी / दशैँ",
+    "name_en": "Dashain / Vijaya Dashami",
+    "month_bs": "Kartik",
+    "description": "Nepal's biggest festival celebrating the victory of good over evil, marked by family gatherings and blessings."
+  },
+  {
+    "name_np": "नव वर्ष (नेपाल सम्बत)",
+    "name_en": "Nepal Sambat New Year",
+    "month_bs": "Kartik",
+    "description": "New Year in the traditional Nepal Sambat calendar, celebrated mainly by the Newar community."
+  },
+  {
+    "name_np": "तिहार / दीपावली",
+    "name_en": "Tihar / Deepawali",
+    "month_bs": "Kartik",
+    "description": "The festival of lights, honoring crows, dogs, cows, and brothers, with oil lamps and decorations."
+  },
+  {
+    "name_np": "छठ पर्व",
+    "name_en": "Chhath Parva",
+    "month_bs": "Kartik",
+    "description": "A festival dedicated to the Sun God, with rigorous fasting and prayers at rivers."
+  },
+  {
+    "name_np": "उधौली पर्व",
+    "name_en": "Udhauli Parva",
+    "month_bs": "Mangsir",
+    "description": "A Kirant festival marking the migration of people from the hills to lower regions for winter."
+  },
+  {
+    "name_np": "धन्यपूर्णिमा",
+    "name_en": "Dhanya Purnima",
+    "month_bs": "Mangsir",
+    "description": "A festival celebrated by various communities, marking gratitude for a good harvest."
+  },
+  {
+    "name_np": "खिचा पूर्णिमा",
+    "name_en": "Kichaa Purnima",
+    "month_bs": "Mangsir",
+    "description": "A Newar festival where people pay respects to crows, believed to be messengers of Yama, the god of death."
+  },
+  {
+    "name_np": "तोर्पेवा / लोसर",
+    "name_en": "Torpwa / Lhosar",
+    "month_bs": "Poush",
+    "description": "New Year's celebration for various Buddhist communities, including Tamang, Gurung, and Sherpa."
+  },
+  {
+    "name_np": "प्रथ्वी जयन्ती",
+    "name_en": "Prithvi Jayanti",
+    "month_bs": "Poush",
+    "description": "A day honoring King Prithvi Narayan Shah, the unifier of Nepal."
+  },
+  {
+    "name_np": "राष्ट्रीय एकता दिवस",
+    "name_en": "National Unity Day",
+    "month_bs": "Poush",
+    "description": "A day commemorating national unity and the contributions of King Prithvi Narayan Shah."
+  },
+  {
+    "name_np": "सोनाम लोसर",
+    "name_en": "Sonam Lhosar",
+    "month_bs": "Magh",
+    "description": "Tamang New Year, celebrated with cultural events, feasting, and traditional dances."
+  },
+  {
+    "name_np": "ग्याल्पो लोसर",
+    "name_en": "Gyalpo Lhosar",
+    "month_bs": "Falgun",
+    "description": "Sherpa New Year, marked by feasts, dances, and religious rituals."
+  },
+  {
+    "name_np": "महाशिवरात्री",
+    "name_en": "Maha Shivaratri",
+    "month_bs": "Falgun",
+    "description": "A festival dedicated to Lord Shiva, where devotees fast and visit temples."
+  },
+  {
+    "name_np": "फागु पूर्णिमा / होली",
+    "name_en": "Holi / Fagu Purnima",
+    "month_bs": "Falgun",
+    "description": "A colorful festival celebrating the victory of good over evil, marked by throwing colors and water."
+  },
+  {
+    "name_np": "घोडेजात्रा",
+    "name_en": "Ghode Jatra",
+    "month_bs": "Chaitra",
+    "description": "A unique horse racing festival in Kathmandu to ward off evil spirits."
+  },
+  {
+    "name_np": "रामनवमी",
+    "name_en": "Ram Navami",
+    "month_bs": "Chaitra",
+    "description": "A festival celebrating the birth of Lord Ram, with prayers and temple visits."
+  }
+]
