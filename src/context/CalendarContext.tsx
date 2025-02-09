@@ -17,6 +17,7 @@ const CalendarContext = createContext<CalendarContextType | undefined>(undefined
 // Create a Provider Component
 export const CalendarProvider = ({ children }: { children: React.ReactNode }) => {
   // Convert the current date to the Nepali calendar
+  
   const todayBS = ADToBS(new Date().toISOString().split("T")[0]);
   const [currentNepaliDate] = useState({
     year: parseInt(todayBS.split("-")[0]),
