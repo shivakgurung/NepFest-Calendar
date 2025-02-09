@@ -1,12 +1,10 @@
 import { useMemo, useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { NEPALI_MONTHS_OF_YEAR } from '../../lib/constant';
+import { BSDateProps } from '../../types/BSDate';
 
-interface BSDateProps {
-    year: number;
-    month: number;
-    day: number;
-}
+
+
 
 export default function AddEvent() {
     const [open, setOpen] = useState(false)
@@ -24,11 +22,31 @@ export default function AddEvent() {
         setBS((prev) => ({ ...prev, [field]: value }));
     };
 
-    const handleAddEvent = () => {
-
-        setOpen(false)
+        const handleAddEvent = () => {
+            if (!text) return; // Prevent empty events
         
-    }
+            // Convert BS date to a sortable format (YYYY-MM-DD)
+            const eventDate = `${BS.year}-${String(BS.month).padStart(2, '0')}-${String(BS.day).padStart(2, '0')}`;
+        
+            // Retrieve existing events from localStorage
+            const storedEvents: Event[] = JSON.parse(localStorage.getItem("events") || "[]");
+        
+            // Add new event
+            const updatedEvents = [...storedEvents, { date: eventDate, text }];
+            // console.log(`Updated Events `, updatedEvents)
+        
+            // Sort events by date (chronologically)
+            updatedEvents.sort((a, b) => a.date.localeCompare(b.date));
+        
+            // Save back to localStorage
+            localStorage.setItem("events", JSON.stringify(updatedEvents));
+        
+            // Close modal & reset input
+            setOpen(false);
+            setText("");
+        };
+        
+        
 
     return (
         <div>
