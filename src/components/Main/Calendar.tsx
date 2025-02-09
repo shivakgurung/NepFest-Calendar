@@ -7,29 +7,7 @@ const Calendar: FC<CalendarProps> = ({ dayArray, monthMeta }) => {
     <>
       <div className="col-span-12 xl:col-span-7 px-1 py-5 sm:p-8 bg-gradient-to-b from-white/25 to-white xl:bg-white rounded-2xl max-xl:row-start-1">
         <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-5">
-          {/* <div className="flex items-center justify-between gap-4 w-full">
-            <button className="text-indigo-600 p-1 rounded transition-all duration-300 hover:text-white hover:bg-indigo-600" onClick={()=> {}}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentcolor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"></path>
-              </svg>
-            </button>
-            <h5 className="text-2xl pr-4 leading-8 font-semibold text-gray-900">{monthMeta?.np}</h5>
-            <div className="flex items-center justify-between">
-              <h5 className="text-l leading-8 font-semibold text-gray-900">{monthMeta?.en}</h5>
-
-              <button className="text-indigo-600 p-1 rounded transition-all duration-300 hover:text-white hover:bg-indigo-600">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M6.00236 3.99707L10.0025 7.99723L6 11.9998" stroke="currentcolor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"></path>
-                </svg>
-              </button>
-            </div>
-          </div> */}
-
-          {/* <div className="flex items-center rounded-md p-1 bg-indigo-50 gap-px">
-                    <button className="py-2.5 px-5 rounded-lg bg-indigo-50 text-indigo-600 text-sm font-medium transition-all duration-300 hover:bg-indigo-600 hover:text-white">Day</button>
-                    <button className="py-2.5 px-5 rounded-lg bg-indigo-600 text-white text-sm font-medium transition-all duration-300 hover:bg-indigo-600 hover:text-white">Week</button>
-                    <button className="py-2.5 px-5 rounded-lg bg-indigo-50 text-indigo-600 text-sm font-medium transition-all duration-300 hover:bg-indigo-600 hover:text-white">Month</button>
-                  </div> */}
+         
 
         </div>
         <div className="border border-indigo-200 rounded-xl bg-indigo-50 overflow-hidden">

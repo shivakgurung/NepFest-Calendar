@@ -36,7 +36,7 @@ const DateConverter = () => {
 
   return (
     <div className="flex justify-start flex-col min-h-[80vh]">
-      <h6 className="text-blue-700 text-xl font-semibold">Date Converter</h6>
+      <h6 className="text-indigo-900 text-xl font-semibold">Date Converter</h6>
 
       <div className="flex justify-center my-8 gap-x-6">
         <div >
