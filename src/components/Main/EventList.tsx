@@ -12,7 +12,12 @@ const EventList: FC<CalendarProps> = ({ dayArray, monthMeta }) => {
         {dayArray?.map((festival: Day, i: number) => {
           return (
             <div key={i} className="p-6 rounded-xl bg-white">
-              <Event date={festival?.n + ", " + monthMeta?.np + " (" + festival?.e + ", " + monthMeta?.en + ")"} text={festival?.f} />
+              <Event
+                date={festival?.n + ", " + monthMeta?.np + " (" + festival?.e + ", " + monthMeta?.en + ")"}
+                text={festival?.f}
+                isShowOptions={false}
+              />
+
             </div>
           )
         })}

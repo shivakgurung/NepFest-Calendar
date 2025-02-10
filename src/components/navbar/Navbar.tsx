@@ -1,7 +1,8 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router-dom'
-import AddEvent from '../Modal/AddEvent'
+import EventModal from '../Modal/EventModal'
+import { useState } from 'react'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -13,6 +14,7 @@ const navigation = [
 
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   return (
     <Disclosure as="nav" className="border-b w-full border-gray-300 pb-4 ">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -43,7 +45,7 @@ export default function Navbar() {
           </div>
           
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <AddEvent/>
+          <EventModal isOpen={isOpen} setIsOpen={setIsOpen}  />
           </div>
         </div>
       </div>

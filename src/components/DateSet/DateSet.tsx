@@ -77,7 +77,8 @@ const DateSet = () => {
 
                     {NEPALI_MONTHS_OF_YEAR?.map((month, i) => {
                         return (
-                            <option
+                            <option 
+                            key={month}
                                 className={i == selectedYearMonth?.month - 1 ? "bg-blue-400" : ""} value={i + 1} >{month}</option>
 
                         )
