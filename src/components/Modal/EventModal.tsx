@@ -44,7 +44,7 @@ export default function EventModal({ isOpen, setIsOpen, eventData }: EventModalP
         } else {
             handleAddMyEvent(eventDate, text); // Adding event
         }
-
+        setText('')
         handleClose();
     };
 
@@ -56,41 +56,46 @@ export default function EventModal({ isOpen, setIsOpen, eventData }: EventModalP
             >
                 Update Event
             </span>)}
-            <Dialog open={isOpen} onClose={handleClose} className="relative z-10">
+            <Dialog open={isOpen} onClose={handleClose} className="relative z-10 bg--gray-200">
                 <DialogBackdrop className="fixed inset-0 bg-gray-500/75" />
                 <div className="fixed inset-0 z-10 flex items-center justify-center">
                     <DialogPanel className="bg-white rounded-lg p-6 w-full max-w-lg shadow-lg">
-                        <DialogTitle className="text-lg font-semibold">
+                        <DialogTitle className="text-lg font-semibold text-gray-800">
                             {eventData ? 'Edit Event' : 'Add Event'}
                         </DialogTitle>
                         <div className="mt-4">
-                            <label className="block text-sm font-medium">Date</label>
+                            <label className="block text-sm font-medium text-gray-700 ">Date</label>
                             <div className="flex gap-2 mt-1">
-                                <select value={BS.year} onChange={(e) => setBS({ ...BS, year: Number(e.target.value) })}>
+                                <select className='text-gray-600 border border-gray-500 rounded' value={BS.year} onChange={(e) => setBS({ ...BS, year: Number(e.target.value) })}>
                                     {years.map((year) => <option key={year} value={year}>{year}</option>)}
                                 </select>
-                                <select value={BS.month} onChange={(e) => setBS({ ...BS, month: Number(e.target.value) })}>
+                                <select
+                                className='text-gray-600 border border-gray-500 rounded'
+                                 value={BS.month} onChange={(e) => setBS({ ...BS, month: Number(e.target.value) })}>
                                     {NEPALI_MONTHS_OF_YEAR.map((month, i) => <option key={i} value={i + 1}>{month}</option>)}
                                 </select>
-                                <select value={BS.day} onChange={(e) => setBS({ ...BS, day: Number(e.target.value) })}>
+                                <select
+                                className='text-gray-600 border border-gray-500 rounded'
+                                 value={BS.day} onChange={(e) => setBS({ ...BS, day: Number(e.target.value) })}>
                                     {days.map((day) => <option key={day} value={day}>{day}</option>)}
                                 </select>
                             </div>
 
-                            <label className="block mt-3 text-sm font-medium">Event Description</label>
+                            <label className="block mt-3 text-sm font-medium text-gray-700">Event Description</label>
                             <textarea 
+                            className='text-gray-600 border border-gray-500 rounded w-full p-2'
                             onKeyDown={(e) => e.stopPropagation()}
                             defaultValue={text} onChange={(e) => {
                                 // e.preventDefault();
                                 setText(e.target.value)
-                            }} className="w-full p-2 border rounded"></textarea>
+                            }} ></textarea>
                         </div>
 
                         <div className="mt-4 flex justify-end">
-                            <button onClick={handleSubmit} disabled={!text} className="bg-indigo-600 text-white px-4 py-2 rounded">
+                            <button onClick={handleSubmit} disabled={!text} className="disabled:opacity-50 bg-indigo-600 text-white px-4 py-2 rounded">
                                 {eventData ? 'Update Event' : 'Add Event'}
                             </button>
-                            <button onClick={handleClose} className="ml-2 bg-gray-300 px-4 py-2 rounded">Cancel</button>
+                            <button onClick={handleClose} className="ml-2 bg-gray-400 px-4 py-2 rounded">Cancel</button>
                         </div>
                     </DialogPanel>
                 </div>

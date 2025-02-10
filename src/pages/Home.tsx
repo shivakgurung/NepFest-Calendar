@@ -30,13 +30,13 @@ const Home = () => {
         < >
             <div className="w-full max-w-7xl mx-auto px-2 lg:px-8 py-8" >
 
-                {isLoading ? (<LoadingSpinner/>) : (
+                {/* {isLoading ? (<LoadingSpinner/>) : ( */}
                     <div className="mb-4">
                         <h3 className='text-3xl pr-4 leading-8 font-semibold text-gray-900  mb-2 underline'>Today's Date</h3>
                         <h5 className="text-2xl pr-4 leading-8 font-semibold text-gray-900">{NEPALI_MONTHS_OF_YEAR[currentNepaliDate?.month - 1] + " " + toNepaliNumber(currentNepaliDate?.year) + ", " + toNepaliNumber(currentNepaliDate?.day)}</h5>
                         <h5 className="text-l leading-8 font-semibold text-gray-900">{new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</h5>
                     </div>
-                )}
+                {/* )} */}
                 <br />
                 <div className="flex justify-center gap-x-0 sm:gap-x-4 lg:gap-x-10  w-full">
                     <DateSet />
