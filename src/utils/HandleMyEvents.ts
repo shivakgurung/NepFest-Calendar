@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 interface Event {
     date: string;
     text: string;
@@ -11,6 +13,8 @@ export const handleDeleteMyEvent = (date: string, text: string) => {
     })
 
     sortAndStoreEvents(newEventList)
+    toast.success("You have successfully deleted the event. ");
+
 }
 
 
@@ -33,6 +37,8 @@ export const handleUpdateMyEvent = (
     });
 
     sortAndStoreEvents(updatedEvents);
+    toast.success("You have successfully updated the event. ");
+
 };
 
 
@@ -45,6 +51,8 @@ export const handleAddMyEvent = (date: string, text: string) => {
     // console.log(`Updated Events `, updatedEvents)
 
     sortAndStoreEvents(updatedEvents)
+    toast.success("You have successfully added an event. ");
+    
 
 
 }
