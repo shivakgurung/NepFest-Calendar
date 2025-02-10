@@ -6,9 +6,12 @@ const Calendar: FC<CalendarProps> = ({ dayArray, monthMeta }) => {
   return (
     <>
       <div className="col-span-12 xl:col-span-7 px-1 py-5 sm:p-8 bg-gradient-to-b from-white/25 to-white xl:bg-white rounded-2xl max-xl:row-start-1">
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-5">
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-center mb-5">
          
-
+        <h5 className="text-2xl pr-4 leading-8 font-semibold text-gray-900">{monthMeta?.np}</h5>
+            <div className="flex items-center justify-between">
+              <h5 className="text-l leading-8 font-semibold text-gray-900">{monthMeta?.en}</h5>
+              </div>
         </div>
         <div className="border border-indigo-200 rounded-xl bg-indigo-50 overflow-hidden">
           <div className="grid grid-cols-7 rounded-t-3xl border-b border-indigo-200  ">

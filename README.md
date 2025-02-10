@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+# 🌐 Nepali Festivals & Events Calendar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **feature-rich Nepali Calendar app** that allows users to:
 
-Currently, two official plugins are available:
+- ✅ **View today's date** in both **Nepali (Bikram Sambat)** and **English (Gregorian)**.
+- ✅ **Browse any Nepali month** from **2000 to 2100**.
+- ✅ **See events** for each month in both a **calendar view** and an **event list view**.
+- ✅ **View Nepali festivals** for a given year.
+- ✅ **Convert dates** between Nepali (BS) and English (AD).
+- ✅ **Manage personal events** (add, update, delete), stored in **localStorage** and persisted on rerender.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Dual Date Display**: Shows today’s date in **both Nepali and English formats**.
+- **Full Calendar Navigation**: Browse **any month of any year** from 2000–2100.
+- **Festival Listings**: View a list of **major Nepali festivals** for a given year.
+- **Date Converter**: Convert **Nepali BS dates to English AD** and vice versa.
+- **Personal Events Management**:
+  - Add personal events
+  - Update existing events
+  - Delete events
+  - Events persist even after a page refresh
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React.js** - UI Framework
+- **TypeScript** - Strong typing
+- **Tailwind CSS** - Styling
+- **TanStack Query** - Efficient data fetching
+- **localStorage** - Persistent event storage
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 💾 Installation & Setup
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/shivakgurung/NepFest-Calendar.git
+   cd nepali-calendar-app
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Run the app:**
+   ```sh
+   npm run dev
+   ```
+
+## 📚 Data Source
+
+The calendar and festival data were obtained through web scraping. Ensure that the use of this data complies with the original source's terms of service.
+
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+💪 **Contributions are welcome!** Feel free to fork, submit issues, or make pull requests to improve this project.
+

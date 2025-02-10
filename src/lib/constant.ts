@@ -19,4 +19,4 @@ export const DAYS_OF_WEEK: DayOfWeek[] = [
 ];
 
 export const MAX_YEAR:number = 2100;
-export const MIN_YEAR:number = 2080;
+export const MIN_YEAR:number = 2000;

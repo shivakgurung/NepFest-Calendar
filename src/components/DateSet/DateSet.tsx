@@ -5,7 +5,7 @@ import { MAX_YEAR, MIN_YEAR, NEPALI_MONTHS_OF_YEAR } from "../../lib/constant";
 const DateSet = () => {
     const { selectedYearMonth, setSelectedYearMonth } = useCalendar();
     // Generate years from 2000 to 2100
-    const years = useMemo(() => Array.from({ length: 21 }, (_, i) => 2080 + i), []);
+    const years = useMemo(() => Array.from({ length: 100 }, (_, i) => MIN_YEAR + i), []);
 
     const isNextDisabled = selectedYearMonth.year >= MAX_YEAR && selectedYearMonth.month >= 12;
     const isPrevDisabled = selectedYearMonth.year <= MIN_YEAR && selectedYearMonth.month <= 1;

@@ -9,18 +9,20 @@ const EventList: FC<CalendarProps> = ({ dayArray, monthMeta }) => {
       {/* <p className="text-lg font-normal text-gray-600 mb-8">Plan & celebrate to the fullest</p> */}
       <div className="flex gap-5 flex-col">
 
-        {dayArray?.map((festival: Day, i: number) => {
-          return (
-            <div key={i} className="p-6 rounded-xl bg-white">
-              <Event
-                date={festival?.n + ", " + monthMeta?.np + " (" + festival?.e + ", " + monthMeta?.en + ")"}
-                text={festival?.f}
-                isShowOptions={false}
-              />
+        {dayArray?.length == 0 ? (<h6 className="text-indigo-600">No data found</h6>) : (
+          dayArray?.map((festival: Day, i: number) => {
+            return (
+              <div key={i} className="p-6 rounded-xl bg-white">
+                <Event
+                  date={festival?.n + ", " + monthMeta?.np + " (" + festival?.e + ", " + monthMeta?.en + ")"}
+                  text={festival?.f}
+                  isShowOptions={false}
+                />
 
-            </div>
-          )
-        })}
+              </div>
+            )
+          })
+        )}
 
 
       </div>

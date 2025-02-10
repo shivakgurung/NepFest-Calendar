@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import { NEPALI_MONTHS_OF_YEAR } from '../../lib/constant';
+import { MIN_YEAR, NEPALI_MONTHS_OF_YEAR } from '../../lib/constant';
 import { BSDateProps } from '../../types/BSDate';
 import { handleAddMyEvent, handleUpdateMyEvent } from '../../utils/HandleMyEvents';
 
@@ -25,7 +25,7 @@ export default function EventModal({ isOpen, setIsOpen, eventData }: EventModalP
         }
     }, [eventData]);
 
-    const years = useMemo(() => Array.from({ length: 21 }, (_, i) => 2080 + i), []);
+    const years = useMemo(() => Array.from({ length: 100 }, (_, i) => MIN_YEAR + i), []);
     const days = useMemo(() => Array.from({ length: 32 }, (_, i) => 1 + i), []);
 
     const handleClose = () => {

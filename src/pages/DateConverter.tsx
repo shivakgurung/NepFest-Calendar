@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { NEPALI_MONTHS_OF_YEAR } from "../lib/constant";
+import { MIN_YEAR, NEPALI_MONTHS_OF_YEAR } from "../lib/constant";
 import { ADToBS, BSToAD } from "bikram-sambat-js";
 
 const DateConverter = () => {
@@ -9,7 +9,7 @@ const DateConverter = () => {
     month: 1,
     day: 1,
   });
-  const years = useMemo(() => Array.from({ length: 21 }, (_, i) => 2080 + i), []);
+  const years = useMemo(() => Array.from({ length: 21 }, (_, i) => MIN_YEAR + i), []);
   const days = useMemo(() => Array.from({ length: 32 }, (_, i) => 1 + i), []);
 
   useEffect(() => {
