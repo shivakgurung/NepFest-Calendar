@@ -45,7 +45,7 @@ export const handleAddMyEvent = (date: string, text: string) => {
     // console.log(`Updated Events `, updatedEvents)
 
     sortAndStoreEvents(updatedEvents)
-   
+
 
 }
 
@@ -66,4 +66,12 @@ export const sortAndStoreEvents = (newEventList: Event[]) => {
     // Save back to localStorage
     localStorage.setItem("events", JSON.stringify(newEventList));
     window.dispatchEvent(new Event("storage"));
+}
+
+export const getMyEvents = (searchValue : string) => {
+    const events = getPersonalEvents()
+    const myEvents = events.filter(event => {
+        return event.text.includes(searchValue)
+    })
+    return myEvents
 }
