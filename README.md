@@ -17,6 +17,7 @@ A **feature-rich Nepali Calendar app** that allows users to:
 - **Date Converter**: Convert **Nepali BS dates to English AD** and vice versa.
 - **Personal Events Management**:
   - Add personal events
+  - Search personal events
   - Update existing events
   - Delete events
   - Events persist even after a page refresh

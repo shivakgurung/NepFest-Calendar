@@ -72,7 +72,7 @@ const MyEvents = () => {
                             </div> */}
                             {searchValue && (<h6 className="text-gray-500 text-start">Results</h6>)}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {myEvents?.map((event: LocalEvent, i: number) => {
+                                {myEvents?.map((event: LocalEvent) => {
                                     return (
 
                                         <div key={event?.text.substring(0, 5) + event?.date} className="w-full my-2 p-6 rounded-xl border-indigo-100 border bg-white">
