@@ -79,7 +79,7 @@ export const sortAndStoreEvents = (newEventList: Event[]) => {
 export const getMyEvents = (searchValue : string) => {
     const events = getPersonalEvents()
     const myEvents = events.filter(event => {
-        return event.text.includes(searchValue)
+        return event.text.toLowerCase().includes(searchValue.toLowerCase())
     })
     return myEvents
 }
